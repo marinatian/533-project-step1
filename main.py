@@ -87,14 +87,12 @@ def main():
         if choice == "1":
             product_management(product_manager)
         elif choice == "2":
-            stock_management(sales_manager)
+            stock_management(stock_manager,perishable_stock_manager)
         elif choice == "3":
             sales_management(product_manager,sales_manager)
         elif choice == "4":
             discount_management(discount_manager)
         elif choice == "5":
-            perishable_stock_management(perishable_stock_manager)
-        elif choice == "6":
             print("Exiting system...")
             break
         else:
