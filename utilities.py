@@ -25,8 +25,7 @@ def print_menu():
     print("2. Stock Management")
     print("3. Sales Management")
     print("4. Discount Management")
-    print("5. Manage Perishable Stock")
-    print("6. Exit")
+    print("5. Exit")
     print()
 
 def print_product_menu():
@@ -43,7 +42,7 @@ def print_stock_menu():
     print("1. View Stock")
     print("2. Add Stock")
     print("3. Reduce Stock")
-    print("4. Check Perishable Stock (If applicable)")
+    print("4. Check Perishable Stock")
     print("5. Return to Main Menu")
     print()
 
@@ -145,7 +144,7 @@ def product_management(product_manager):
         else:
             print("Invalid choice. Please try again.")
 
-def stock_management(stock_manager):
+def stock_management(stock_manager,perishable_stock_manager):
     while True:
         print_stock_menu()
         choice = input("Enter your choice: ")
@@ -163,7 +162,7 @@ def stock_management(stock_manager):
             stock_manager.remove_stock(pid, quantity)
             print(f"Stock reduced for product {pid}.")
         elif choice == "4":
-            perishable_stock_management()
+            perishable_stock_management(perishable_stock_manager)
         elif choice == "5":
             break
         else:
